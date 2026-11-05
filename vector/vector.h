@@ -14,7 +14,7 @@ class Vector{
     
     public:
 
-        int .grow(){ // make the array dynamic
+        int grow(){ // make the array dynamic
 
             capacity *=2;
             
@@ -42,7 +42,7 @@ class Vector{
             this->capacity = capacity; //total sizd of array 
         }
 
-        void .push_back(int element){ //insert at back
+        void push_back(int element){ //insert at back
 
             if(current_Size >= capacity){
                 grow();
@@ -53,7 +53,7 @@ class Vector{
        
         }
 
-        int .pop_back(){ //delete from back
+        int pop_back(){ //delete from back
 
             if(current_Size == 0){
                 cout<<"Can't delete elements  ";
@@ -64,7 +64,7 @@ class Vector{
 
         }
 
-        T& .at(int index){ //returns the particular index
+        T& at(int index){ //returns the particular index
 
 
             if(index < 0 || index >= current_Size){
@@ -81,13 +81,13 @@ class Vector{
 
         }
 
-        bool .empty(){ //check the array is empty or not 
+        bool empty(){ //check the array is empty or not 
 
             return current_Size == 0;
 
         }
 
-        int .insert(int index , int element){
+        int insert(int index , int element){ //inserting element at a particular value
 
             if(index < 0 || index > capacity){
                 cout<<"Invalid Index"<<endl;
@@ -106,17 +106,17 @@ class Vector{
 
         }
 
-        int .Capacity(){
+        int Capacity(){
             return capacity;
         }
 
-        int .clear(){ // changes the current size to 0
+        int clear(){ // changes the current size to 0
 
             current_Size = 0;
 
         }
 
-        int .erase(int index){//remove the element from the position 
+        int erase(int index){//remove the element from the position 
 
             if(index < 0 || index >= current_Size){
                 cout<<"Can't access values beyond limit!"<<"\n";
@@ -130,10 +130,17 @@ class Vector{
              return 0;
         }
 
-        int .reserve(){
+        int reserve(){
             
             
 
+        }
+
+        void resize(){
+
+            grow();
+            cout<<"resized successful!"<<endl;
+            
         }
 
         // int operator_overloading
